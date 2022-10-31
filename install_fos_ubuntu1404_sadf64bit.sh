@@ -1,26 +1,6 @@
 #!/bin/bash
 
-# FUNCTION: Ubuntu 14.04 Check
-distro(){
-if [ -f /etc/lsb-release ]; then
-    . /etc/lsb-release
-        if [ $DISTRIB_ID == Ubuntu ]; then
-            if [ $DISTRIB_RELEASE != "14.04" ]; then
-                error
-            fi
-        else
-            error
-        fi
-fi
-}
 
-# FUNCTION: ERROR
-error(){
-    sleep 2
-    echo -ne '\n'"--PROBLEM!--"
-    echo -ne '\n'"Support: https://github.com/zgelici/FOS-Streaming-v1" '\n'
-exit
-}
 
 
 # FUNCTION: FOS-Streaming Exist
